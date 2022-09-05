@@ -1,13 +1,17 @@
 import React from 'react';
 import ReactDOM from 'react-dom/client';
-import "bootstrap/dist/css/bootstrap.css";
 import './index.css';
 import App from './App';
+import { ThemeProvider } from '@emotion/react';
+import { theme } from './theme';
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
-  <React.StrictMode>
+
+
+  //! Here we wrap our app with our own theme we created with mui
+  <ThemeProvider theme={theme}>
     <App />
-  </React.StrictMode>
+  </ThemeProvider>
 );
 
