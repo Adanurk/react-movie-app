@@ -15,7 +15,7 @@ const Login = () => {
         <img src={myImg} alt="img"/>
       </div>
       <div className='register-form'>
-        <h1 className='form-title display-3'>Register</h1>
+        <h1 className='form-title display-3'>Login</h1>
         <form id='register' onSubmit={handleSubmit}>
           <div className='mb-3'>
             <label htmlFor="email" className='form-label'>Email</label>

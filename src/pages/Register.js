@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import { createUser } from '../auth/firebase';
 import myImg from "./../cinema.avif";
 
 const Register = () => {
@@ -9,6 +10,7 @@ const Register = () => {
 
   const handleSubmit = (e) => {
     e.preventDefault();
+    createUser(email, password);
     console.log(firstName);
   }
 
