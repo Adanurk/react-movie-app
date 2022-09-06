@@ -1,18 +1,23 @@
-import { AppBar,styled, Toolbar } from '@mui/material';
 import React from 'react';
-
-// const StyledToolbar = styled(Toolbar)({
-//   display:"flex",
-//   justifyContent:"space-between",
-// })
+import { Link } from 'react-router-dom';
 
 const Navbar = () => {
+  const currentUser = {displayName: "Kübra"}
 
   return (
-    <AppBar position='static'>
-      <Toolbar>Navbar</Toolbar>
+    <div>
+      <nav className='navbar navbar-expand-lg'>
+        <div className='container-fluid'>
+          <Link to={"/"} className="navbar-brand text-white">
+            <h4>Movie App</h4>
+          </Link>
+          <div className="d-flex text-white align-items-center">
+            <h5 className='mb-0 text-capitalize'>{currentUser?.displayName}</h5>
 
-    </AppBar>
+          </div>
+        </div>
+      </nav>
+    </div>
   )
 }
 
