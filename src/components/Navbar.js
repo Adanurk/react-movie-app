@@ -1,8 +1,10 @@
 import React from 'react';
-import { Link } from 'react-router-dom';
+import { Link, useNavigate } from 'react-router-dom';
 
 const Navbar = () => {
-  const currentUser = {displayName: "Kübra"}
+  const navigate = useNavigate();
+  // const currentUser = {displayName: "Kübra"}
+  const currentUser = false;
 
   return (
     <div>
@@ -12,8 +14,12 @@ const Navbar = () => {
             <h4>Movie App</h4>
           </Link>
           <div className="d-flex text-white align-items-center">
-            <h5 className='mb-0 text-capitalize'>{currentUser?.displayName}</h5>
 
+         {currentUser ? (
+            <h5 className='mb-0 text-capitalize'>{currentUser?.displayName}</h5>
+          ) : (<button className='ms-2 btn btn-outline-light' onClick={() => navigate("/login")}>Login</button>)}
+
+          {currentUser ? (<button className='ms-2 btn btn-outline-light'>Logout</button>) : (<button className='ms-2 btn btn-outline-light' onClick={() => navigate("/register")}>Register</button>)} 
           </div>
         </div>
       </nav>
