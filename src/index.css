@@ -94,6 +94,12 @@ body {
   min-height: 800px;
 }
 
+.form-image img{
+  width: 100%;
+  object-position: center;
+  object-fit: cover;
+}
+
 .register-form {
   flex: 1;
   background-color: #eeeeee;
