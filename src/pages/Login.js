@@ -34,7 +34,7 @@ const Login = () => {
           </div>
           <input type="submit" className="btn btn-primary form-control" value="Login"/>
         </form>
-        <button className='btn btn-primary form-control' onClick={() => handleProviderLogin}>Continue with Google</button>
+        <button className='btn btn-primary form-control' onClick={handleProviderLogin}>Continue with Google</button>
       </div>
     </div>
   )

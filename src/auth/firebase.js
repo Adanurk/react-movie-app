@@ -11,7 +11,7 @@ const firebaseConfig = {
 };
 
 const app = initializeApp(firebaseConfig);
-const auth = getAuth(app);
+export const auth = getAuth();
 
 export const createUser = async (email, password, navigate, displayName) => {
     try {
@@ -41,16 +41,7 @@ export const logOut = () => {
 }
 
 export const userObserver = (setCurrentUser) => {
-    onAuthStateChanged(auth, (currentUser) => {
-        if(currentUser){
-            setCurrentUser(currentUser);
-
-        }else{
-            // user signed out
-            setCurrentUser(false);
-
-        }
-    })
+    
 }
 
 export const signUpProvider = (navigate) => {
@@ -58,6 +49,7 @@ export const signUpProvider = (navigate) => {
     signInWithPopup(auth, provider)
     .then((result) => {
         console.log(result);
+        navigate("/");
     })
     .catch((error) => {
         console.log(error);
