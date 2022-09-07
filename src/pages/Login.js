@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { signIn } from '../auth/firebase';
+import { signIn, signUpProvider } from '../auth/firebase';
 import myImg from "./../cinema.avif";
 import { useNavigate } from 'react-router-dom';
 
@@ -7,6 +7,10 @@ const Login = () => {
   const [email, setEmail] = useState();
   const [password, setPassword] = useState();
   const navigate = useNavigate();
+  
+  const handleProviderLogin = () => {
+    signUpProvider(navigate);
+  }
 
   const handleSubmit = (e) => {
     e.preventDefault();
@@ -30,7 +34,7 @@ const Login = () => {
           </div>
           <input type="submit" className="btn btn-primary form-control" value="Login"/>
         </form>
-        <button className='btn btn-primary form-control'>Continue with Google</button>
+        <button className='btn btn-primary form-control' onClick={() => handleProviderLogin}>Continue with Google</button>
       </div>
     </div>
   )
