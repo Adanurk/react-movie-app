@@ -1,5 +1,5 @@
 import { initializeApp } from "firebase/app";
-import { getAuth, createUserWithEmailAndPassword, signInWithEmailAndPassword } from "firebase/auth";
+import { getAuth, createUserWithEmailAndPassword, signInWithEmailAndPassword, signOut } from "firebase/auth";
 
 const firebaseConfig = {
     apiKey: "AIzaSyBAXUFc8t5Yl5rMmJiVkolo7VOo9A0PiGM",
@@ -29,4 +29,9 @@ export const signIn = async(email, password, navigate) => {
     }catch(err){
         alert(err.message)
     }
+}
+
+export const logOut = () => {
+    signOut(auth);
+    alert("user signed out")
 }
