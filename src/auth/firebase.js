@@ -2,12 +2,12 @@ import { initializeApp } from "firebase/app";
 import { getAuth, createUserWithEmailAndPassword, signInWithEmailAndPassword, signOut } from "firebase/auth";
 
 const firebaseConfig = {
-    apiKey: "AIzaSyBAXUFc8t5Yl5rMmJiVkolo7VOo9A0PiGM",
-  authDomain: "movie-app-93dd8.firebaseapp.com",
-  projectId: "movie-app-93dd8",
-  storageBucket: "movie-app-93dd8.appspot.com",
-  messagingSenderId: "337729760577",
-  appId: "1:337729760577:web:eed2456671e4a6e69a85c0"
+    apiKey: process.env.REACT_APP_apiKey,
+  authDomain: process.env.REACT_APP_authDomain,
+  projectId: process.env.REACT_APP_projectId,
+  storageBucket: process.env.REACT_APP_storageBucket,
+  messagingSenderId: process.env.REACT_APP_messagingSenderId,
+  appId: process.env.REACT_APP_appId
 };
 
 const app = initializeApp(firebaseConfig);
