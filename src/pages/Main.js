@@ -64,5 +64,4 @@ const Main = () => {
 
 export default Main
 
-//! PAGINATION ?? FOR MORE PAGES??
-//I put my global data in context, local states in local.
+//! PAGINATION - FOR MORE PAGES
