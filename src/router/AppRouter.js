@@ -4,10 +4,11 @@ import Login from "../pages/Login";
 import Main from "../pages/Main";
 import Register from "../pages/Register";
 import MovieDetail from "../pages/MovieDetail";
-import {currentUser} from "../context/AuthContext";
+import {AuthContext} from "../context/AuthContext";
 import { useContext } from "react";
 
 const AppRouter = () => {
+  const {currentUser} = useContext(AuthContext)
   return (
     <Router>
       <Navbar/>
