@@ -8,7 +8,6 @@ const Navbar = () => {
   const [loading, setLoading] = useState(true);
   const navigate = useNavigate();
   const { currentUser, setCurrentUser } = useContext(AuthContext);
-  console.log(currentUser);
 
   useLayoutEffect(() => {
     onAuthStateChanged(auth, (currentUser) => {
