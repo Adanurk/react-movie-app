@@ -63,5 +63,3 @@ const Main = () => {
 }
 
 export default Main
-
-//! PAGINATION - FOR MORE PAGES
