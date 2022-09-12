@@ -24,7 +24,6 @@ export const createUser = async (email, password, navigate, displayName) => {
         await updateProfile(auth.currentUser, {
             displayName: displayName,
         });
-        console.log(userCredential);
         navigate("/");
     }catch(err){
         alert(err.message);
@@ -36,7 +35,6 @@ export const signIn = async(email, password, navigate) => {
        //! a firebase method for sign in
        let userCredential = await signInWithEmailAndPassword(auth, email, password);
        navigate("/");
-       console.log(userCredential);
     }catch(err){
         alert(err.message)
     }

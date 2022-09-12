@@ -17,7 +17,7 @@ const Main = () => {
   const getMovies = (API) => {
     axios
       .get(API)
-      .then((res) => setMovies(res.data.results))
+      .then((res) => {setMovies(res.data.results); console.log(res.data.results)})
       .catch((err) => console.log(err));
   };
 
